@@ -103,9 +103,7 @@ ul li a:hover {
 }
 
 .section {
-    background-color: var(--extra-light);
-    background-image: linear-gradient(to bottom right, var(--extra-light), rgb(193, 193, 244));
-
+    background-color: rgb(245, 245, 255);
 }
 
 .section__container {
@@ -186,7 +184,7 @@ ul li a:hover {
     font-size: 1rem;
     font-weight: 600;
     letter-spacing: 5px;
-    padding: .5rem 1rem;
+    padding: .5rem .55rem;
     outline: none;
     border: 2px solid #30303085;
     border-radius: 10px;
