@@ -7,7 +7,8 @@
     --text-dark: #1f2937;
     --text-light: #6b7280;
     --extra-light: #faf5ff;
-    --max-width: 1500px;
+    --max-width: 1100px;
+    --max-width-nav: 85%;
 }
 
 * {
@@ -35,7 +36,7 @@ nav {
 }
 
 .nav__content {
-    max-width: var(--max-width);
+    max-width: var(--max-width-nav);
     margin: auto;
     padding: 1.5rem 1 rem;
     display: flex;
