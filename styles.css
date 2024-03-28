@@ -275,11 +275,13 @@ div.desc {
 }
 
 div.gallery {
-    border: 1px solid #ccc;
+    border: 1px solid var(--extra-light);
+    border-radius: 10px;
 }
 
 div.gallery:hover {
-    border: 1px solid #777;
+    border: 1px solid #ffffff00;
+    scale: 1.1;
 }
 
 div.gallery img {
@@ -311,7 +313,7 @@ div.desc {
 
 @media only screen and (max-width: 500px) {
     .responsive {
-        width: 100%;
+        width: 50%;
     }
 }
 
@@ -319,20 +321,6 @@ div.desc {
     content: "";
     display: table;
     clear: both;
-}
-
-@media only screen and (max-width: 750px) {
-    .responsive {
-        width: 50%;
-        margin: 6px 0;
-    }
-}
-
-@media only screen and (max-width: 500px) {
-    .responsive {
-        width: 100%;
-        margin: 6px 0;
-    }
 }
 
 @media (width < 750px) {
