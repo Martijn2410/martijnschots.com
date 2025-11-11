@@ -55,6 +55,7 @@ nav {
     top: 0;
     left: 0;
     background-color: var(--navbar-color);
+    box-shadow: 0 5px 8px #0000009a;
     z-index: 99;
 }
 
@@ -414,7 +415,6 @@ div.desc {
     .image img {
         width: min(25rem, 60%);
         border-radius: 10%;
-        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
 
     .action__btns {
