@@ -20,7 +20,7 @@
     :root {
         --background-color: #2f2f3b;
         --navbar-color: #202020;
-        --mobile-nav: #44444480;
+        --mobile-nav: #0000004d;
         --primary-color: #8176e5;
         --primary-color-dark: #4d3fbb;
         --secondary-color: #5457ed;
@@ -38,6 +38,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 }
 
 a {
@@ -102,14 +103,29 @@ ul {
     transition: left 0.3s;
 }
 
+ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+ul li {
+    display: inline-block; /* or flex if your nav uses flex */
+}
+
 ul li a {
+    display: inline-block;
     padding: 0.5rem 1rem;
     border: 2px solid transparent;
-    color: rgba(255, 255, 255, 0.5);
+    color: var(--text-dark);
     text-decoration: none;
     font-weight: 600;
-    color: var(--text-dark);
     transition: .3s;
+}
+
+ul li.selectedpage a {
+    padding: 0.75rem 1rem;
+    color: var(--secondary-color);
 }
 
 ul li a:hover {
@@ -118,13 +134,16 @@ ul li a:hover {
     color: var(--secondary-color);
 }
 
-.selectedpage {
+/* .selectedpage {
     padding: 0.75rem 1rem;
     border: 2px solid transparent;
     text-decoration: none;
     font-weight: 600;
     color: var(--secondary-color);
-    transition: .3s;
+} */
+
+.selected {
+    color: var(--primary-color);
 }
 
 .section__container {
@@ -259,6 +278,16 @@ ul li a:hover {
     color: var(--text-light);
 }
 
+.wip1 {
+    text-align: center;
+    align-items: center;
+    color: var(--text-light);
+}
+
+.wip1 a{
+    color: var(--secondary-color);
+}
+
 .socials {
     color: #ffffff;
     background-color: var(--social-buttons);
@@ -370,7 +399,7 @@ div.desc {
     clear: both;
 }
 
-@media (width < 750px) {
+@media only screen and (max-width: 750px) {
     nav {
         border-bottom-left-radius: 0px;
         border-bottom-right-radius: 0px;
