@@ -13,21 +13,21 @@
     border-radius: 2.5em;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     box-sizing: border-box;
-     border: 10px solid var(--image-border-color);
+    border: 10px solid var(--image-border-color);
 }
 
 .portfolio__img:hover {
-border-color: var(--primary-color); 
+    border-color: var(--primary-color);
 }
 
 .portfolio__img img {
     width: 100%;
     display: block;
-    border-radius: 0.5em;
+    border-radius: 10px;
 }
 
 .portfolio__img img:hover {
-transform: scale(1.05);
+    transform: scale(1.05);
 }
 
 .title {
@@ -45,6 +45,79 @@ transform: scale(1.05);
     -webkit-backdrop-filter: blur(50px);
     border-top: 1px solid #77777777
 }
+
+.section__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: var(--max-width);
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+.section__box {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    /* background-color: #7777771a;
+    border-radius: 10px;
+    border: 10px solid var(--image-border-color);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 0;
+    padding: 2rem;
+    height: auto;
+}
+
+.section__box__img {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #7777771a;
+    border-radius: 10px;
+    border: 10px solid var(--image-border-color);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.section__box__img img {
+    width: auto;
+    height: 100%;
+    object-fit:cover;
+    max-width: 100%;
+
+}
+
+
+.section__box h1,
+h2,
+p {
+    color: var(--text-light);
+    text-align: left;
+}
+
+.page-title {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.page-title span {
+    color: var(--primary-color);
+}
+
+.link-highlight {
+    color: var(--secondary-color);
+}
+
 
 @media screen and (max-width: 1600px) {
     .portfolio__column {
